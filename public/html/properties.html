@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="HTML, CSS">
+    <link rel="stylesheet" type="text/css" href="../mystyle.css">
+    <title>Chris' Corner</title>
+    
+</head>
+<body>
+    <div class="header">
+        <h2>Christofer Gumowskis tutorial</h2>
+    </div>
+
+    <div id="menu" class="column">
+        <div class="bottom">
+            <a href="../../index.html"><img src="../images/scroll-gray.png" class="imgBack" alt="Tillbaka"></a>
+            <h2>HTML</h2>
+			<ol>
+				<li><a href="html.html">Grunderna kring HTML</a></li>
+				<li><a href="tags.html">HTML-taggar</a></li>
+			</ol>
+	
+			<h2>CSS</h2>
+			<ol>
+				<li><a href="css.html">Grunderna kring CSS</a></li>
+				<li><a href="properties.html">CSS-egenskaper</a></li>
+			</ol>
+			
+			<h2>JavaScript</h2>
+			<ol>
+				<li><a href="javascript.html">Inlämning 1</a></li>
+                <li><a href="guestbook.html">Gästbok</a></li>
+			</ol>
+        </div>
+    </div>
+
+    <div id="contentBody" class="column">
+		<div class="title">
+			<h1>CSS-egenskaper</h1>
+		</div>
+        <div class="bottom">
+			<div id="content">
+                <h2>Font</h2>
+				<p>Med egenskapen font kan man ändra typsnittet på en text. CSS har i grunden fem font-familjer. Mer om detta kan man läsa <a href="https://www.w3schools.com/Css/css_font.asp">här</a>.</p>
+				<pre>
+    /* CSS */
+    #textfont1 { 
+        font-family:"Times New Roman", Times, serif
+        }
+    #textfont2 { 
+        font-family:"Lucida Console", "Courier New", monospace
+        }   
+
+    &lt;!-- HTML --&gt;
+    &lt;p id=textfont1&gt;Här använder vi ett typsnitt...&lt;/p&gt;
+    &lt;p id=textfont2&gt;...och här ett annat&lt;/p&gt;
+                </pre>
+				<div class="example">
+                    <p id=textfont1>Här använder vi ett typsnitt...</p>
+                    <p id=textfont2>...och här ett annat</p>
+                </div>
+				<br><br>
+                
+                <h2>Text-align</h2>
+				<p>Med denna egenskap kan vi justera en texts utskrift horizontellt.</p>
+				<pre>
+    /* CSS */
+    #textalignleft {text-align:left;}
+    #textaligncenter {text-align:center;}
+    #textalignright {text-align:right;}
+
+    &lt;!-- HTML --&gt;
+    &lt;p id="textalignleft"&gt;Vänster&lt;/p&gt;
+    &lt;p id="textaligncenter"&gt;Mitten&lt;/p&gt;
+    &lt;p id="textalignright"&gt;Höger&lt;/p&gt;
+                </pre>
+				<div class="example">
+                    <p id="textalignleft">Vänster</p>
+                    <p id="textaligncenter">Mitten</p>
+                    <p id="textalignright">Höger</p>
+                </div>
+				<br><br>
+                
+                <h2>Text-decoration</h2>
+				<p>Egenskapen används för att sätta eller ta bort viss dekoration från element.</p>
+                <p>Man kan ha en linje <span style="text-decoration: overline;">ovanför</span>, <span style="text-decoration: line-through;">genom</span> eller <span style="text-decoration: underline;">under</span> en text.</p>
+				<pre>
+    /* CSS */
+    #textdecorover {text-decoration:overline;}
+    #textdecorthrough {text-decoration:line-through;}
+    #textdecorunder {text-decoration:underline;}
+    #textdecornone {text-decoration:none;}
+
+    &lt;!-- HTML --&gt;
+    &lt;p id="textdecorover"&gt;Över&lt;/p&gt;
+    &lt;p id="textdecorthrough"&gt;Genom&lt;/p&gt;
+    &lt;p id="textdecorunder"&gt;Under&lt;/p&gt;
+    &lt;a id="textdecornone" href="properties.html"&gt;
+        Länk utan underlinje.&lt;/a&gt;
+                </pre>
+				<div class="example">
+                    <p id="textdecorover">Över</p>
+                    <p id="textdecorthrough">Genom</p>
+                    <p id="textdecorunder">Under</p>
+                    <a id="textdecornone" href="properties.html">Länk utan underlinje</a>
+                </div>
+				<br><br>
+
+                <h2>Word-spacing</h2>
+				<p>Används för att bestämma utrymmet mellan ord i ett element. Standard är 0.25em och det går att sätta ett negativt värde.</p>
+				<pre>
+    /* CSS */
+    #wordspacing1 {word-spacing:1em;}
+    #wordspacing2 {word-spacing:2em;}
+    #wordspacing3 {word-spacing:-1em;}
+
+    &lt;!-- HTML --&gt;
+    &lt;p&gt;Standard avstånd är 0.25em&lt;/p&gt;
+    &lt;p id="wordspacing1"&gt;1 em avstånd&lt;/p&gt;
+    &lt;p id="wordspacing2"&gt;2 em avstånd&lt;/p&gt;
+    &lt;p id="wordspacing3"&gt;-1 em avstånd&lt;/p&gt;
+                </pre>
+				<div class="example">
+                    <p>Standard avstånd är 0.25em</p>
+                    <p id="wordspacing1">1 em avstånd</p>
+                    <p id="wordspacing2">2 em avstånd</p>
+                    <p id="wordspacing3">-0.25 em avstånd</p>
+                </div>
+				<br><br>
+
+                <h2>Color</h2>
+				<p>Med color sätter du färg på din text...</p>
+				<pre>
+    /* CSS */
+    #color1 { color: red;}
+    #color2 { color: blue;}
+    #color3 { color: green;}
+
+    &lt;!-- HTML --&gt;
+    &lt;p id="color1"&gt;Röd text&lt;/p&gt;
+    &lt;p id="color2"&gt;Blå text&lt;/p&gt;
+    &lt;p id="color3"&gt;Grön text&lt;/p&gt;
+                </pre>
+				<div class="example">
+                    <p id="color1">Röd text</p>
+                    <p id="color2">Blå text</p>
+                    <p id="color3">Grön text</p>
+                </div>
+				<br><br>
+
+                <h2>Background-color</h2>
+				<p>...och med background-color sätter du färg på elementets bakgrund.</p>
+				<pre>
+    #bgcolor1 { background-color: red;}
+    #bgcolor2 { background-color: blue;}
+    #bgcolor3 { background-color: green;}
+
+    &lt;!-- HTML --&gt;
+    &lt;p id="bgcolor1"&gt;Röd bakgrund&lt;/p&gt;
+    &lt;p id="bgcolor2"&gt;Blå bakgrund&lt;/p&gt;
+    &lt;p id="bgcolor3"&gt;Grön bakgrund&lt;/p&gt;
+                </pre>
+				<div class="example">
+                    <p id="bgcolor1">Röd bakgrund</p>
+                    <p id="bgcolor2">Blå bakgrund</p>
+                    <p id="bgcolor3">Grön bakgrund</p>
+                </div>
+				<br><br>
+              
+                <h2>Background-image</h2>
+				<p>Med denna egenskap kan man lägga in en bakgrundsbild till ett element. Man brukar även sätta en bakgrundsfärg här ifall att bilden ej är tillgänglig.</p>
+				<pre>
+    /* CSS */
+    .bgimage {
+        background-image: url("../images/background.jpg");
+        background-color: #cccccc;
+    }
+
+    &lt;!-- HTML --&gt;
+    &lt;div class="bgimage"&gt;
+        &lt;p&gt;Här har vi en text...&lt;/p&gt;
+        &lt;p&gt;Med en bakgrundsbild.&lt;/p&gt;
+    &lt;/div&gt;
+            </pre>
+				<div class="example">
+                    <div class="bgimage">
+                        <p>Här har vi en text...</p>
+                        <p>Med en bakgrundsbild.</p>
+                    </div> 
+                </div>
+				<br><br>
+                
+                <h2>List-style-type</h2>
+				<p>Med denna egenskap kan man ändra utseende på list-markeringen i oorganiserade &lt;ul&gt; samt organiserade &lt;ol&gt; listor.</p>
+				<pre>
+    /* CSS */
+    ul.ul1 { list-style-type: circle; }
+    ul.ul2 { list-style-type: square; }
+    ol.ol1 { list-style-type: upper-roman; }
+    ol.ol1 { list-style-type: lower-alpha; }
+
+    &lt;!-- HTML --&gt;
+    &lt;ul class="ul1"&gt;
+        &lt;li&gt;Första raden med cirklar&lt;/li&gt;
+        &lt;li&gt;Andra raden med cirklar&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul class="ul2"&gt;
+        &lt;li&gt;Första raden med fyrkanter&lt;/li&gt;
+        &lt;li&gt;Andra raden med fyrkanter&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ol class="ol1"&gt;
+        &lt;li&gt;Första raden med romerska siffror&lt;/li&gt;
+        &lt;li&gt;Andra raden med romerska siffror&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;ol class="ol2"&gt;
+        &lt;li&gt;Första raden med bokstäver&lt;/li&gt;
+        &lt;li&gt;Andra raden med bokstäver&lt;/li&gt;
+    &lt;/ol&gt;
+                </pre>
+				<div class="example">
+                    <ul class="ul1">
+                        <li>Första raden med cirklar</li>
+                        <li>Andra raden med cirklar</li>
+                    </ul>
+                    <ul class="ul2">
+                        <li>Första raden med fyrkanter</li>
+                        <li>Andra raden med fyrkanter</li>
+                    </ul>
+                    <ol class="ol1">
+                        <li>Första raden med romerska siffror</li>
+                        <li>Andra raden med romerska siffror</li>
+                    </ol>
+                    <ol class="ol2">
+                        <li>Första raden med bokstäver</li>
+                        <li>Andra raden med bokstäver</li>
+                    </ol>
+                </div>
+				<br><br>
+
+                <h2>Height och width</h2>
+				<p>Med dessa egenskaper kan man sätta en bestämd höjd respektive bredd på ett element.</p>
+                <p>För lite mer responsiv hantering av innehållet i t ex en &lt;div&gt; så kan man även använda sig av min/max-height/width.</p>
+				<pre>
+    /* CSS */
+    .coloredClass { background-color: blue;}
+    .narrowClass { width: 200px; background-color: red;}
+    .shortClass { height: 20px; width: 120px; 
+        background-color: green;}
+
+    &lt;!-- HTML --&gt;
+    &lt;div class="coloredClass"&gt; &lt;p&gt; Här är det obehindrat&lt;/p&gt;
+        &lt;div class="narrowClass"&gt;
+            &lt;p&gt;Här var det smalt.&lt;/p&gt;
+            &lt;div class="shortClass"&gt;
+                &lt;p&gt;Här trångt.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+                </pre>
+				<div class="example">
+                    <div class="coloredClass"> <p>Här är det obehindrat</p>
+                        <div class="narrowClass">
+                            <p>Här var det smalt.</p>
+                            <div class="shortClass">
+                                <p>Här trångt.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				<br><br>
+
+                <h2>Float</h2>
+				<p>Med float kan man formatera ett element så att den lägger sig till vänster eller höger om ett annat element. Används ofta för positionering av t ex bilder.</p>
+                <p>Float kan sättas till värdena left, right, none och inherit.</p>
+				<pre>
+    /* CSS */
+    #centertext { text-align:center; }
+    #floatimg1 { float:left; }
+    #floatimg1 { float:right; }
+
+    &lt;!-- HTML --&gt;
+    &lt;p id="centertext"&gt;Här är en centrerad text&lt;/p&gt;
+    &lt;img id="floatimg1" src="../images/scroll-gray.png"
+        alt="vänster"&gt;
+    &lt;img id="floatimg2" src="../images/scroll-gray.png"
+        alt="vänster"&gt;
+                </pre>
+				<div class="example">
+                    <p id="centertext">Här är en centrerad text</p>
+                    <img id="floatimg1" src="../images/scroll-gray.png" alt="vänster">
+                    <img id="floatimg2" src="../images/scroll-gray.png" alt="vänster">
+                </div>
+				<br><br>
+
+                <h2>Position</h2>
+				<p>Med position har man större kontroll över positioneringen av sina element.</p>
+                <p>Position kommer med fem värden: static, relative, fixed, absolute och sticky.</p>
+                <p>Ett element har automatiskt värdet static om inget annat anges. Static följer det vanliga flödet på HTML-sidan och påverkas ej av egenskaperna för top, bottom, left och right.</p>
+                <p>Relative lägger sig på samma plats som static men man kan därefter flytta denna med ovan egenskaper.</p>
+                <p>Fixed ställs in med en fast plats i relation till viewporten.</p>
+                <p>Absolute positionerar ett element i relation till närmaste övergripande (ancestor) element. Den kan då lägga ett element över andra som finns i ett annat flöde. Finns det ingen positionerad ancestor så följer den istället dokumentets kropp.</p>
+                <p>Slutligen så ger sticky möjligheten att positionera ett element baserat på användarens scroll-placering. Den lägger sig som ett element med relativ positionering tills användarens scroll position når en given plats, då blir den istället fixed.</p>
+
+
+				<pre>
+    /* CSS */
+    .staticDiv { position: static; border: 3px solid #cccccc;}
+    .relativeDiv { position:relative; left:50px; border: 
+        3px solid #cccccc; }
+    .fixedDiv { position:fixed; bottom:200px; right:50px; 
+        width: 200px; border: 3px solid #cccccc;}
+    .absoluteDiv {position:absolute; top:90px; right: 0; 
+        width:200px; height:50px; border: 3px solid #cccccc }
+    .stickyDiv { position: sticky; top: 0px; 
+        background-color:green; border: 3px solid #cccccc}
+
+
+     &lt;!-- HTML --&gt;
+     &lt;div class="stickyDiv"&gt;&lt;p&gt;Här är en sticky
+        positionerad div&lt;/p&gt;&lt;/div&gt;
+     &lt;p&gt;Här är ovan är en sticky&lt;/p&gt;
+     &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+     &lt;p&gt;Den absoluta diven syns uppe till höger.&lt;/p&gt;&lt;br&gt;
+     &lt;p&gt;Den fixerade syns nere till höger&lt;/p&gt;&lt;br&gt;
+     &lt;p&gt;Den statiska och relativa syns här nedan&lt;/p&gt;
+                 
+     &lt;div class="staticDiv"&gt;&lt;p&gt;Här är en statiskt
+        positionerad div&lt;/p&gt;&lt;/div&gt;
+     &lt;div class="relativeDiv"&gt;&lt;p&gt;Här är en relativt
+        positionerad div&lt;/p&gt;&lt;/div&gt;
+     &lt;div class="fixedDiv"&gt;&lt;p&gt;är är en fixerad
+        positionerad div&lt;/p&gt;&lt;/div&gt;
+     &lt;div class="absoluteDiv"&gt;&lt;p&gt;Här är en absolut
+        positionerad div&lt;/p&gt;&lt;/div&gt;
+
+                </pre>
+                <br>
+                <p>Ett exempel visas på <a href="position.html">separat sida</a></p>
+				<br><br>
+
+                <h2>Border</h2>
+				<p>Med egenskapen border kan man sätta en ram runt ett element, samt stilsätta ramen. Nedan ges några exempel.</p>
+				<pre>
+    /* CSS */
+    #dotted { border-style:dotted; border-width:thick;}
+    #dashed { border-style:dashed; border-width:thin;}
+    #solid { border-style:solid; border-color:green;}
+    #double { border-style:double; border-radius: 50px;}
+    #mixed {   border-top-style: dotted; border-right-style: 
+        solid; border-bottom-style: dotted; 
+        border-left-style: solid;}
+
+    &lt;!-- HTML --&gt;
+    &lt;p id="dotted"&gt;Tjocka prickar till kanter&lt;/p&gt;
+    &lt;p id="dashed"&gt;Tunna streck till kanter&lt;/p&gt;
+    &lt;p id="solid"&gt;Solid, grön kant&lt;/p&gt;
+    &lt;p id="double"&gt;Dubbla, rundade kanter&lt;/p&gt;
+    &lt;p id="mixed"&gt;Den här har blandade kanter&lt;/p&gt;
+                </pre>
+				<div class="example">
+                    <p id="dotted">Tjocka prickar till kanter</p>
+                    <p id="dashed">Tunna streck till kanter</p>
+                    <p id="solid">Solid, grön kant</p>
+                    <p id="double">Dubbla, rundade kanter</p>
+                    <p id="mixed">Den här har blandade kanter</p>
+                </div>
+				<br><br>
+
+                <h2>Padding</h2>
+				<p>Egenskapen genererar utrymme runt ett elements innehåll, innanför definerade gränser.</p>
+				<pre>
+    /* CSS */
+    #paddedDiv1 { padding: 150px; border: 3px solid #cccccc; }
+    #paddedDiv2 { padding: 50px; border: 3px solid #cccccc;
+         background-color: green; }
+    #paddedDiv3 { padding-left: 150px; border: 3px solid #cccccc; }
+
+    &lt;!-- HTML --&gt;
+    &lt;div id="paddedDiv1"&gt;
+        &lt;p&gt;Här är (extra) paddning på 150px&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div id="paddedDiv2"&gt;
+        &lt;p&gt;Här är (extra) paddning på 50px&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div id="paddedDiv3"&gt;
+        &lt;p&gt;Här är (extra) paddning på 150px, men bara från
+        vänster&lt;/p&gt;
+    &lt;/div&gt;
+                </pre>
+				<div class="example">
+                    <div id="paddedDiv1">
+                        <p>Här är (extra) paddning på 150px</p>
+                    </div>
+                    <div id="paddedDiv2">
+                        <p>Här är (extra) paddning på 50px och färgat</p>
+                    </div>
+                    <div id="paddedDiv3">
+                        <p>Här är (extra) paddning på 150px, men bara från vänster</p>
+                    </div>
+                </div>
+				<br><br>
+                
+                <h2>Margin</h2>
+				<p>Egenskaper ser till att ett element håller ett visst avstånd från närliggande element.</p>
+                <p>Margin, precis som padding, kan sättas för specifika riktningar.</p>
+                <p>Till skillnad från paddning så skappar margin inte något extra utrymme.</p>
+				<pre>
+    /* CSS */
+    #marginLeft {margin-left:100px;}
+    #marginUp {margin-top: 100px;
+        background-color: green;}
+
+
+    &lt;!-- HTML --&gt;
+    &lt;p id="marginLeft"&gt;Håller sig från vänster&lt;/p&gt;
+    &lt;p id="marginUp"&gt;Håller sig uppifrån och är färgad &lt;/p&gt;
+                </pre>
+				<div class="example">
+                    <p id="marginLeft">Håller sig från vänster</p>
+                    <p id="marginUp">Håller sig uppifrån och är färgad </p>
+                </div>
+				<br><br>
+            </div>			
+		</div>
+    </div>
+
+
+    <div class="footer">
+
+    </div>
+</body>
+</html>

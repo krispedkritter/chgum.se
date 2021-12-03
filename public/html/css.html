@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="HTML, CSS">
+    <link rel="stylesheet" type="text/css" href="../mystyle.css">
+    <title>Chris' Corner</title>
+    
+</head>
+<body>
+    <div class="header">
+        <h2>Christofer Gumowskis tutorial</h2>
+    </div>
+
+    <div id="menu" class="column">
+        <div class="bottom">
+            <a href="../../index.html"><img src="../images/scroll-gray.png" class="imgBack" alt="Tillbaka"></a>
+            <h2>HTML</h2>
+			<ol>
+				<li><a href="html.html">Grunderna kring HTML</a></li>
+				<li><a href="tags.html">HTML-taggar</a></li>
+			</ol>
+	
+			<h2>CSS</h2>
+			<ol>
+				<li><a href="css.html">Grunderna kring CSS</a></li>
+				<li><a href="properties.html">CSS-egenskaper</a></li>
+			</ol>
+			
+			<h2>JavaScript</h2>
+			<ol>
+				<li><a href="javascript.html">Inlämning 1</a></li>
+                <li><a href="guestbook.html">Gästbok</a></li>
+			</ol>
+        </div>
+    </div>
+
+    <div id="contentBody" class="column">
+		<div class="title">
+			<h1>CSS</h1>
+		</div>
+        <div class="bottom">
+			<div id="content">                
+                <br><h2>Hur använder man CSS?</h2>
+				<p>Det finns tre sätt hur man kan infoga CSS stilisering på: extern, intern och inline.</p>
+                <p>Med extern CSS använder man sig utav en separat fil (style sheet) för att hantera all stilisering på en och samma plats. Samma .css-fil kan användas på hela webbsidan.</p>
+                <p>Intern CSS används om en specifik HTML-sida ska ha specifik stilsättning. Den deklareras som extern, i &lt;head&gt;</p>
+                <p>Inline stil deklareras unikt för ett enda element.</p>
+				<pre>
+    &lt;!-- Extern style sheet deklarerat i &lt;head&gt; --&gt;
+    &lt;head&gt;
+        &lt;link rel="stylesheet" type="text/css" 
+            href="../mystyle.css"&gt;
+    &lt;/head&gt;
+
+    &lt;!-- Intern style i &lt;head&gt; --&gt;
+    &lt;head&gt;
+        &lt;style&gt;
+            /* CSS-kod här */
+            h1 { color:red;}
+        &lt;/style&gt;
+    &lt;/head&gt;
+
+    &lt;!-- Inline CSS --&lt;
+    &lt;h1 style="color:red;"&gt;
+        Det här skulle bli en röd mening.&lt;/h1&gt;
+    </pre>
+				<br><br>
+
+                <h2>Selektorer</h2>
+				<p>Det finns fem typer av grundselektorer som används för att välja element som skall stilsättas.</p>
+                <p>Dessa selektorer är av typerna: universala, typ, klass, id och attribut.</p>
+                <p>En universal selektor väljer alla element. Den kan begränsas till ett specifikt namnområde (namespace).</p>
+                <p>En typ-selektor används för att stilisera en typ av HTML-tagg över hela webbsidan. Detta kan te x vara &lt;p&gt; eller &lt;h1&gt;.</p>
+                <p>Klass- och id stilsätter alla element av specificerad klass respektive id.</p>
+                <p>Slutligen kan attribut-selektorn användas för att stilsätta de element som har ett givet attribut.</p>
+                <p>Selektorer kan grupperas tillsammans med ett kommatecken , samt kombineras i olika utföranden. Se <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors">denna länk</a> för mer information.</p>
+                
+				<pre>
+    /* CSS */
+    /* Universal selektor */
+    * {}
+    /* Typ-selektor */
+    elementnamn {}
+    /* Klass-selektor */
+    .klassnamn {}
+    /* ID-selektor */
+    #idnamn {}
+    /* Attribut-selektor */
+    [autoplay] {}
+                </pre>
+				<br><br>
+
+                <h2>Deklarationsblock</h2>
+				<p>Efter att ha bestämt vilken selektor som ska användas för stilsättningen, så är det dags att koda lite sådant.</p>
+                <p>All stilsättning sker inom deklarationsblocket { ... } för en selektor.</p>
+                <p>I exemplet nedan lägger vi bla lite färg på ID-selektorn för id #message.</p>
+				<pre>
+    /* CSS */
+    #message {
+        background-color:blue;
+        color:red;
+        font-weight:500;
+    }
+
+    &lt;!-- HTML --&gt;
+    &lt;p id=message&gt;Hallå där!&lt;/p&gt;
+            </pre>
+				<div class="example"><p id=message>Hallå där!</p></div>
+				<br><br>
+
+                <h2>Klasser .class och ID #id</h2>
+				<p>Om man istället vill stilsätta flera element samtidigt så gör man oftast det med hjälp av antingen klasser eller id.</p>
+                <p>Med en klass kan du använda samma stilsättning på flera element så som &lt;div&gt;-taggar, en för en, inkapslade i varandra eller vad man nu kan hitta på.</p>
+                <p>ID används generellt för att stilsätta enstaka element, en för en.</p>
+				<pre>
+    &lt;!-- HTML --&gt;
+    &lt;div class="fistClass"&gt;
+        &lt;p&gt;Första klassen är grå.&lt;/p&gt;
+        &lt;div class="secondClass"&gt;
+            &lt;p&gt;Andra klassen är röd.&lt;/p&gt;
+            &lt;p class="firstClass"&gt;Denna och nästa rad 
+                deklarerades som första inne i andra och är 
+                därför grå.&lt;/p&gt;
+            &lt;p class="firstClass"&gt;Notera att vänstersidan är
+                 röd pga marginal i extern stilsättning.&lt;/p&gt;
+            &lt;p class="firstClass" id="uniqueRow"&gt;Den här 
+                raden är unikt orange mha #id.&lt;/p&gt;
+            &lt;p&gt;...och sista raden är röd.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    /* CSS */
+    .firstClass {
+        background-color:grey;
+    }
+    .secondClass {
+        background-color:red;
+    }
+    #uniqueRow { 
+        background-color:orange;
+    }
+            </pre>
+				<div class="example">
+                    <div class="firstClass">
+                        <p>Första klassen är grå.</p>
+                        <div class="secondClass">
+                            <p>Andra klassen är röd.</p>
+                            <p class="firstClass">Denna och nästa rad deklarerades som första inne i andra och är därför grå.</p>
+                            <p class="firstClass">Notera att vänstersidan är röd pga marginal i extern stilsättning.</p>
+                            <p class="firstClass" id="uniqueRow">Den här raden är unikt orange mha #id.</p>
+                            <p>...och sista raden är röd.</p>
+                        </div>
+                    </div>
+                </div>
+				<br><br>
+
+                <h2>Prioriteringsregler och !important</h2>
+				<p>När man arbetar med CSS och stilsättning så är det viktig att känna till de prioriteringsregler som finns, som avgör vilken stilsättning ett element till slut får om den får stilsättning från olika håll.</p>
+                <p>Först och främst så är det den sist deklarerade selektorn, om det finns flera stilsättningar på en och samma selektor, som används:</p>
+                <pre>
+    /* CSS */
+    p{ color: green; }
+    p{ color: red ;}
+    /* stycken p blir röda */ 
+                </pre>
+				<br>
+                <p>Har man flera olika typer av stilsättning så går CSS efter en inbyggd specifikations-faktor som är numrerad 1-100. Det högsta värdet används.</p>
+                <p>#id selektorn har värdet 100</p>
+                <p>.class selektorn har värdet 10</p>
+                <p>tag selektorn har värdet 1</p>
+                
+                <pre>
+    /* CSS */
+    #messageId { color:red;}
+    .messageClass {color:blue;}
+    p{ color: green;}
+                </pre>
+                <div class="example">
+                    <p class="messageClass" id="messageID1">
+                        Röd text då ID har prio 100.
+                    </p>
+                </div>
+                <p>Vill man trumfa den inbyggda prioriteringsregeln så kan man använda sig av regeln !important.</p>
+                <p>!important kör över ALL tidigare stilisering för det elementet.</p>
+                <pre>
+    /* CSS */
+    #messageId2 { color:red;}
+    #messageId2 { color:green;}
+    .messageClass2 {color:blue !important;}
+                </pre>
+                <div class="example">
+                    <p class="messageClass2" id="messageID2">
+                        Blå text då !important kör över #id
+                    </p>
+                </div>
+				<br><br>
+
+
+
+           
+                
+               
+                <h2><a href="properties.html">Vidare till CSS-egenskaper</a></h2>
+            </div>				
+		</div>
+    </div>
+
+    <div class="footer">
+
+    </div>
+</body>
+</html>

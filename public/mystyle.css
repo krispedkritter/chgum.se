@@ -1,0 +1,234 @@
+html {
+    height: 100%;
+    background-color:rgb(26, 25, 25);
+}
+
+body {
+    height: 100%;   
+    overflow: hidden;  /* makes the body non-scrollable (we will add scrolling to the sidebar and main content containers) */
+    margin: 0px;  /* removes default style */
+    padding: 0px;
+    display: flex;  /* enables flex content for its children */
+    box-sizing: border-box;
+    /*overflow-y: auto;  /* adds scroll to this container on right side, no sticky menu/header/footer */
+}
+
+.header {
+    height: 5%;
+    width:100%;
+    position:fixed;
+    text-align:center;
+}
+.column {
+    height: 90%;  /* allows both columns to span the full height of the browser window */
+    display: flex;
+    flex-direction: column;  /* places the left and right headers above the bottom content */
+    position:relative;
+    /*margin-top:auto;
+    margin-bottom:auto;*/
+    
+}
+
+#menu {
+    flex-shrink: 1;  /* makes sure that content is not cut off in a smaller browser window */
+}
+
+.imgBack {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    filter: invert(1);
+}
+
+
+
+#contentBody {
+    /*flex-shrink:1;*/
+    padding-left: 0%;
+    margin:auto; 
+    border: rgb(199, 199, 199);
+    border-style:inset;
+}
+.title {
+    border-bottom: rgb(199, 199, 199);
+    border-style:inset;
+    background-color: rgb(46, 42, 42);
+}
+
+#content {
+    width:960px;
+    background-color: rgb(150, 137, 137);
+    /*padding: 10px 0 10px 0%; */
+    margin: -20px 0 -20px 0;
+    min-height:100%;
+    padding-bottom:2em;
+   
+    
+}
+#contentButtons {
+    background-color: rgb(150, 137, 137);
+    position:fixed;
+}
+
+.bottom {
+    flex-grow: 1;  /* ensures that the container will take up the full height of the parent container */
+    overflow-y:auto;  /* adds scroll to this container */
+    overflow-x:hidden;
+}
+/* Scrollbar */
+
+/* width */
+div::-webkit-scrollbar {
+    width: 20px;
+    background-color: rgb(150, 137, 137);
+  }
+/* Track */
+div::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px black;
+border-radius: 10px;
+}
+
+/* Handle */
+div::-webkit-scrollbar-thumb {
+background:  rgb(199, 199, 199);
+border-radius: 10px;
+}
+/* Handle on hover */
+div::-webkit-scrollbar-thumb:hover {
+background:   rgb(46, 42, 42);
+}
+
+ol {
+    list-style: upper-roman;
+    
+}
+a, ol, ul, dl, table{
+    color: white;
+    font-family: arial;
+}
+table, th, td{
+    margin-left: auto;
+    margin-right: auto;
+    border:2px solid black;
+}
+
+p, h1,h2,h3,h4,h5,h6, dd, dt, form{
+    color: white;
+    font-family: arial;
+    margin-left: 3%; 
+    margin-right: 3%;
+}
+p {
+    font-size: 22px;
+}
+dd { margin-left:6%}
+pre {
+    text-indent: 3%;
+    font-size:20px;
+    background-color:white;
+    width: 75%;
+    margin: auto;
+    border-style:dotted;
+    border-color: grey;
+       
+}
+.example {
+    width: 75%;
+    margin: auto;
+    border-style:dotted;
+    border-color: white;
+    font-size: 20px;
+    padding: 2px 0 2px 0;
+}
+.footer {
+    height: 5%;
+    width:100%;
+    position:fixed;
+    bottom:0;
+    z-index: 1;
+}
+.firstClass {
+    background-color:grey;
+}
+.secondClass {
+    background-color:red;
+}
+
+#uniqueRow {
+    background-color:orange;
+}
+.messageClass {
+    color:blue;
+}
+.messageClass2 {
+    color:blue !important;
+}
+#messageID1 {
+    color:red;
+}
+#messageID2 {
+    color:green;
+}
+#message {
+    background-color:blue;
+    color:red;
+    font-weight:500;
+}
+#textfont1 { font-family:"Times New Roman", Times, serif}
+#textfont2 { font-family:"Lucida Console", "Courier New", monospace}
+#textalignleft {text-align:left;}
+#textaligncenter {text-align:center;}
+#textalignright {text-align:right;}
+#textdecorover {text-decoration:overline;}
+#textdecorthrough {text-decoration:line-through;}
+#textdecorunder {text-decoration:underline;}
+#textdecornone {text-decoration:none;}
+#wordspacing1 {word-spacing:1em;}
+#wordspacing2 {word-spacing:2em;}
+#wordspacing3 {word-spacing:-0.25em;}
+#color1 { color: red;}
+#color2 { color: blue;}
+#color3 { color: green;}
+#bgcolor1 { background-color: red;}
+#bgcolor2 { background-color: blue;}
+#bgcolor3 { background-color: green;}
+.bgimage {
+    background-image: url("images/background.jpg");
+    background-color: #cccccc;
+}
+ul.ul1 { list-style-type: circle; }
+ul.ul2 { list-style-type: square; }
+ol.ol1 { list-style-type: upper-roman; }
+ol.ol2 { list-style-type: lower-alpha; }
+.coloredClass { background-color:blue;}
+.narrowClass { width: 200px; background-color: red;}
+.shortClass { height: 20px; width: 120px; background-color: green;}
+#floatimg1 { float:left; }
+#floatimg1 { float:right; }
+#centertext { text-align: center;}
+.staticDiv { position: static; border: 3px solid #cccccc;}
+.relativeDiv { position:relative; left:50px; border: 3px solid #cccccc; }
+.fixedDiv { position:fixed; bottom:200px; right:50px; width: 200px; border: 3px solid #cccccc;}
+.absoluteDiv {position:absolute; top:90px; right: 0; width:200px; height:50px; border: 3px solid #cccccc }
+.stickyDiv { position: sticky; top: 0px; background-color:green; border: 3px solid #cccccc}
+#dotted { border-style:dotted; border-width:thick;}
+#dashed { border-style:dashed; border-width:thin;}
+#solid { border-style:solid; border-color:green;}
+#double { border-style:double; border-radius: 50px;}
+#mixed {   border-top-style: dotted; border-right-style: solid; border-bottom-style: dotted; border-left-style: solid;}
+#paddedDiv1 { padding: 150px; border: 3px solid #cccccc; }
+#paddedDiv2 { padding: 50px; border: 3px solid #cccccc; background-color: green;}
+#paddedDiv3 { padding-left: 150px; border: 3px solid #cccccc; }
+#marginLeft {margin-left:100px;}
+#marginUp {margin-top: 100px; background-color: green;}
+#guestbookForm {padding-top: 50px;}
+#guestbookMessage {width: 500px;}
+#guestbookName, #guestbookEmail {width: 200px;}
+.postContainer {  
+    border: rgb(199, 199, 199);
+    border-style:inset;
+    background-color: rgb(46, 42, 42);
+    width: 500px;
+    margin-left: 20px;
+    margin-top: 20px;}
+.postContainer p {font-size: 16px;}

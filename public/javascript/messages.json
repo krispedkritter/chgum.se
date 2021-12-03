@@ -1,0 +1,17 @@
+[
+    {
+        "message": "Ett första meddelande kommer här.",
+        "name": "Christofer",
+        "email": "christofer.gumowski.syned21jon@tucsweden.se"
+    },
+    {
+        "message": "Han shot first!",
+        "name": "Child of Greedo",
+        "email": "Breedo@moseisly.uni"
+    },
+    {
+        "message": "&lt;script&gt;alert(&quot;test&quot;);&lt;/script&gt;",
+        "name": "ondman",
+        "email": "ond@ondska.ond"
+    }
+]

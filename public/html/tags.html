@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="HTML, CSS">
+    <link rel="stylesheet" type="text/css" href="../mystyle.css">
+    <title>Chris' Corner</title>
+    
+</head>
+<body>
+    <div class="header">
+        <h2>Christofer Gumowskis tutorial</h2>
+    </div>
+
+    <div id="menu" class="column">
+        <div class="bottom">
+            <a href="../../index.html"><img src="../images/scroll-gray.png" class="imgBack" alt="Tillbaka"></a>
+            <h2>HTML</h2>
+			<ol>
+				<li><a href="html.html">Grunderna kring HTML</a></li>
+				<li><a href="tags.html">HTML-taggar</a></li>
+			</ol>
+	
+			<h2>CSS</h2>
+			<ol>
+				<li><a href="css.html">Grunderna kring CSS</a></li>
+				<li><a href="properties.html">CSS-egenskaper</a></li>
+			</ol>
+			
+			<h2>JavaScript</h2>
+			<ol>
+				<li><a href="javascript.html">Inlämning 1</a></li>
+                <li><a href="guestbook.html">Gästbok</a></li>
+			</ol>
+        </div>
+    </div>
+
+    <div id="contentBody" class="column">
+		<div class="title">
+			<h1>HTML-taggar</h1>
+		</div>
+        <div class="bottom">
+			<div id="content">
+            	<h2><br>&lt;html&gt;</h2>
+				<p>Taggen &lt;html&gt; används för att representera roten av ett HTML dokument. Alla HTML element (förutom &lt;!DOCTYPE&gt;) ska vara inom taggen.</p>
+				<pre>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;title&gt;Dokumentets titel&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Sidans innehåll&lt;/h1&gt;
+            &lt;p&gt;Innehåll&lt;/p&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;
+                </pre>
+				<br><br>
+
+                <h2>&lt;head&gt;</h2>
+				<p>&lt;head&gt; används för att mata webbläsaren med data om sidan. Detta kan vara allt från CSS-stylesheet, språk och karaktärsuppsättning, till vad som ska stå på fliken när sidan är öppen i en webbläsare.</p>
+				<pre>
+    &lt;head&gt;
+        &lt;!-- Bestämmer karaktärsuppsättning --&gt;
+        &lt;meta charset="UTF-8"&gt;
+
+        &lt;!-- Kompatibilitet med webbläsare --&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt; 
+
+        &lt;!-- Visuell skalning baserat på bildskärmstorlek --&gt;
+        &lt;meta name="viewport" content="width=device-width, 
+        initial-scale=1.0" &gt;
+
+        &lt;!-- Sökord för sökmotorer --&gt;
+        &lt;meta name="keywords" content="HTML, CSS"&gt;
+
+        &lt;!-- Länk till CSS-stylesheet som ska användas --&gt;
+        &lt;link rel="stylesheet" type="text/css" 
+        href="../mystyle.css"&gt;
+        
+        &lt;!-- Vad som syns i fliken i webbläsaren --&gt;
+        &lt;title&gt;Chris' Corner&lt;/title&gt;
+    &lt;/head&gt;
+                </pre>
+				<br><br>
+
+
+
+                <h2>&lt;body&gt;</h2>
+				<p>I &lt;body&gt; defineras sidans innehåll, som rubriker, textstycken, bilder, länkar och så vidare.</p>
+				<pre>
+    &lt;body&gt;
+        &lt;h1&gt;
+            Sidans Rubrik
+        &lt;/h1&gt;
+        &lt;p&gt;Sidans innehåll...&lt;/p&gt;
+        &lt;p&gt;...&lt;/p&gt;
+    &lt;/body&gt;
+                </pre>
+				<br><br>
+
+                <h2>&lt;footer&gt;</h2>
+				<p>...och som slutet på kroppen så kan man ha en &lt;footer&gt;. Här läggs oftast information om ägarskap, copyright, kontakt, en sidkarta och relaterade dokument.</p>
+				<pre>
+    &lt;footer&gt;
+        &lt;p&gt;Copyright: "xxx"&lt;/p&gt;
+    &lt;/footer&gt;
+                </pre>
+				<br><br>
+
+                <h2>Rubriker &lt;h1&gt; - &lt;h6&gt;</h2>
+				<p>Rubriker kommer med fördefinerad stilsättning och olika storlekar mellan 1-6 där &lt;h1&gt; är störst. Stilsättningen kan man sedan ändra själv.</p>
+				<pre>
+    &lt;h1&gt;>Första storleken &lt;h1&gt;&lt;/h1&gt;
+    &lt;h2&gt;Andra storleken &lt;h2&gt;&lt;/h2&gt;
+    &lt;h3&gt;Tredje storleken &lt;h3&gt;&lt;/h3&gt;
+    &lt;h4&gt;Fjärde storleken &lt;h4&gt;&lt;/h4&gt;
+    &lt;h5&gt;Femte storleken &lt;h5&gt;&lt;/h5&gt;
+    &lt;h6&gt;Sjätte storleken &lt;h6&gt;&lt;/h6&gt;
+                </pre>
+				<div class="example">
+                    <h1>Första storleken &lt;h1&gt;</h1>
+                    <h2>Andra storleken &lt;h2&gt;</h2>
+                    <h3>Tredje storleken &lt;h3&gt;</h3>
+                    <h4>Fjärde storleken &lt;h4&gt;</h4>
+                    <h5>Femte storleken &lt;h5&gt;</h5>
+                    <h6>Sjätte storleken &lt;h6&gt;</h6>
+                </div>
+				<br><br>
+
+                <h2>Textstycken &lt;p&gt;</h2>
+				<p>Taggen används för att skriva ut och stilsätta textstycken.</p>
+				<pre>
+    &lt;h3&gt;Här är en rubrik&lt;/h3&gt;
+    &lt;p&gt;Här är ett textstycke.&lt;/p&gt;
+    &lt;p&gt;Här är ännu ett textstycke.&lt;/p&gt;
+    &lt;p&gt;"Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+        sed do eiusmod tempor incididunt ut labore et dolore 
+        magna aliqua. Ut enim ad minim veniam, quis nostrud 
+        exercitation ullamco laboris nisi ut aliquip ex ea 
+        commodo consequat. Duis aute irure dolor in 
+        reprehenderit in voluptate velit esse cillum dolore eu 
+        fugiat nulla pariatur."
+    &lt;/p&gt;
+                </pre>
+				<div class="example">
+                    <h3>Här är en rubrik</h3>
+                    <p>Här är ett textstycke.</p>
+                    <p>Här är ännu ett textstycke.</p>
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                </div>
+				<br><br>
+                
+                <h2>Bilder &lt;img&gt;</h2>
+				<p>Om man vill visa en bild så kan man använda sig av &lt;img&gt;. Bilden behöver en fungerande sökväg för att kunna visas.</p>
+				<pre>
+    &lt;!-- Bilden deklareras här tillsammans med en sökväg, ett id 
+        för CSS samt en alternativ text om bilden inte visas --&gt;
+    &lt;img src ="../images/scroll-gray.png" 
+    class="imgBack" 
+    alt="Tillbaka"&gt;
+                
+    &lt;!-- Samma med en trasig länk --&gt;
+    &lt;img src ="./images/broken-link.png" 
+    class="imgBack" 
+    alt="Tillbaka"&gt;
+                </pre>
+				<div class="example">
+                    <!-- Bilden deklareras här tillsammans med en sökväg, ett id 
+                    för CSS samt en alternativ text om bilden inte visas -->
+                    <img src ="../images/scroll-gray.png" class="imgBack" alt="Tillbaka">
+
+                    <!-- Samma med en trasig länk -->
+                    <img src ="./images/broken-link.png" 
+                    class="imgBack" 
+                    alt="Tillbaka">
+                </div>
+				<br><br>
+                
+                <h2>Radbrytning &lt;br&gt;</h2>
+				<p>Vill man ha lite utrymme mellan eller inom sina element så kan man använda taggen &lt;br&gt;. Detta används eftersom HTML inte läser av radavstånd i sitt innehåll utan att det deklareras.</p>
+				<pre>
+    &lt;p&gt;Inget extra mellanrum mellan här och 
+
+            där&lt;/p&gt;
+
+    &lt;p&gt;Men här &lt;br&gt; kom en radbrytning.&lt;/p&gt;
+                </pre>
+				<div class="example"><p>Inget extra mellanrum mellan här och 
+                    
+                            där</p>
+                
+                    <p>Men här <br> kom en radbrytning.</p></div>
+                <br>
+				<br><br>
+         
+                <h2>Listor &lt;ol&gt;, &lt;ul&gt; &amp; &lt;dl&gt;</h2>
+				<p>Det finns tre sätt att göra listor på i HTML, ordnade, oordnade och beskrivande (descriptive) listor.</p>
+                <p>Ordnade &lt;ol&gt; och oordnade &lt;ul&gt; listor är numrerade respektive punktmarkerade. Siffrorna samt punkterna kan ändras med stilsättning.</p>
+                <p>Bägge listtyper använder sig av list-föremål (list item) &lt;li&gt; för att populeras</p>
+				<pre>
+    &lt;ol&gt;
+        &lt;li&gt;&lt;h3&gt;Ordnad lista &lt;ol&gt;&lt;/h3&gt;&lt;li&gt;
+        &lt;li&gt;Första punkten&lt;/li&gt;
+        &lt;li&gt;Andra punkten&lt;/li&gt;
+        &lt;li&gt;Tredje punkten&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;h3&gt;Oordnad lista &lt;ul&gt;&lt;/h3&gt;&lt;li&gt;
+        &lt;li&gt;Första punkten&lt;/li&gt;
+        &lt;li&gt;Andra punkten&lt;/li&gt;
+        &lt;li&gt;Tredje punkten&lt;/li&gt;
+    &lt;/ul&gt;
+                </pre>
+				<div class="example">
+                    <ol>
+                        <li><h3>Ordnad lista &lt;ol&gt;</h3></li>
+                        <li>Första punkten</li>
+                        <li>Andra punkten</li>
+                        <li>Tredje punkten</li>
+                    </ol>
+                    <ul>
+                        <li><h3>Oordnad lista &lt;ul&gt;</h3></li>
+                        <li>Första punkten</li>
+                        <li>Andra punkten</li>
+                        <li>Tredje punkten</li>
+                    </ul>
+                </div>
+                <p>Beskrivande listor &lt;dl&gt; används för att para ihop en övertitel &lt;dt&gt; med en underpunkt &lt;dd&gt;</p>
+                <pre>
+    &lt;dl&gt;
+        &lt;dt&gt;Första rubrik&lt;/dt&gt;
+        &lt;dd&gt;Tillhörande text för första rubriken&lt;/dd&gt;
+        &lt;dt&gt;Andra rubrik&lt;/dt&gt;
+        &lt;dd&gt;Tillhörande text för andra rubriken&lt;/dd&gt;
+        &lt;dd&gt;Ännu en tillhörande text för andra rubriken&lt;/dd&gt;
+    &lt;/dl&gt;
+                </pre>
+                <div class="example">
+                    <dl>
+                        <dt>Första rubrik</dt>
+                        <dd>Beskrivande text för första rubriken</dd>
+                        <dt>Andra rubrik</dt>
+                        <dd>Tillhörande text för andra rubriken</dd>
+                        <dd>Ännu en tillhörande text för andra rubriken</dd>
+                    </dl>
+                </div>
+				<br><br>
+
+                <h2>Formulär &lt;form&gt;</h2>
+				<p>HTML kan hantera formulär med element för etiketter &lt;label&gt;, samt inmatningsfunktioner &lt;input&gt; i form av celler för skrivet innehåll &lt;input type="text"&gt;, krysslådor "checkbox" och olika knappar så som för att skicka in "submit" och radioknappar "radio". </p>
+                <pre>
+    &lt;form&gt;
+        &lt;label for="firstrow"&gt;Första radens etikett.&lt;/label&gt;
+        &lt;input type="text" id="firstrow" 
+        name="firstrow" value="Första raden"&gt;&lt;br&gt;
+        
+        &lt;label for="secondrow"&gt;Andra radens etikett.&lt;/label&gt;
+        &lt;input type="text" id="secondrow" 
+        name="secondrow" value="Andra raden"&gt;&lt;br&gt;
+
+        &lt;label for="firstbox"&gt;Första kryssrutan&lt;/label&gt;
+        &lt;input type="checkbox" id="firstbox" 
+        name="firstbox" checked&gt;&lt;br&gt;
+
+        &lt;label for="secondbox"&gt;Andra kryssrutan&lt;/label&gt;
+        &lt;input type="checkbox" id="secondbox" 
+        name="secondbox"&gt;&lt;br&gt;
+
+        &lt;label for="firstradio"&gt;Första radioknappen&lt;/label&gt;
+        &lt;input type="radio" id="firstradio" 
+        name="radio" value="first"&gt;&lt;br&gt;
+
+        &lt;label for="secondradio"&gt;Andra radioknappen&lt;/label&gt;
+        &lt;input type="radio" id="secondradio" 
+        name="radio" value="second"&gt;&lt;br&gt;
+
+        &lt;input type="submit" value="Skicka"&gt;
+    &lt;/form&gt;
+                </pre>
+				<div class="example">
+                    <form>
+                        <label for="firstrow">Första radens etikett.</label>
+                        <input type="text" id="firstrow" name="firstrow" value="Första raden"><br>
+                        <label for="secondrow">Andra radens etikett.</label>
+                        <input type="text" id="secondrow" name="secondrow" value="Andra raden"><br>
+                        <label for="firstbox">Första kryssrutan</label>
+                        <input type="checkbox" id="firstbox" name="firstbox" checked><br>
+                        <label for="secondbox">Andra kryssrutan</label>
+                        <input type="checkbox" id="secondbox" name="secondbox"><br>
+                        <label for="firstradio">Första radioknappen</label>
+                        <input type="radio" id="firstradio" name="radio" value="first"><br>
+                        <label for="secondradio">Andra radioknappen</label>
+                        <input type="radio" id="secondradio" name="radio" value="second"><br>
+                        <input type="submit" value="Skicka">
+                    </form>
+                </div>
+				<br><br>
+
+                <h2>Tabeller &lt;table&gt;</h2>
+				<p>Man kan skapa tabeller direkt i HTML med tillhörande celler och rubriker.</p>
+                <p>En tabells sidhuvud &lt;thead&gt; och kropp &lt;tbody&gt; deklareras tillsammans med rubrik &lt;th&gt;, antal rader &lt;tr&gt; och celler &lt;td&gt;.</p>
+				<pre>
+    &lt;table&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th colspan="3"&gt;Tabellens rubrik&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Tabellens kropp&lt;/td&gt;
+                &lt;td&gt;med tre&lt;/td&gt;
+                &lt;td&gt;kolumner&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;och&lt;/td&gt;
+                &lt;td&gt;två&lt;/td&gt;
+                &lt;td&gt;rader.&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+                </pre>
+				<div class="example">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="3">Tabellens rubrik</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Tabellens kropp</td>
+                                <td>med tre</td>
+                                <td>kolumner</td>
+                            </tr>
+                            <tr>
+                                <td>och</td>
+                                <td>två</td>
+                                <td>rader.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+				<br><br>
+                
+                <h2>&lt;div&gt;</h2>
+				<p>Taggen &lt;div&gt; används för att dela upp en webbsida i flera sektioner som kan ha individuell stilsättning.</p>
+                <p>Det skrivs ut som &lt;div&gt;</p>
+                <p>&lt;div&gt; taggen kan stiliseras med CSS och fungerar kapslade i varandra. I exemplet nedan används inline CSS &lt;style="background-color:"&gt; för att sätta bakgrundsfärger.</p>
+				<pre>
+    &lt;div style="background-color:black"&gt;
+        &lt;p&gt;Här är taggen satt med svart bakgrund.&lt;/p&gt;
+        &lt;div style="background-color:grey"&gt;
+            &lt;p&gt;Här är taggen inkapslad och satt med grå bakgrund.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;p&gt;...och här är lite mer svart firstDiv.&lt;/p&gt;
+    &lt;/div&gt;
+                </pre>
+				<div class="example">
+                    <div class="firstDiv" style="background-color:black">
+                        <p>Här är taggen satt med svart bakgrund.</p>
+                        <div class="secondDiv" style="background-color:grey">
+                            <p>Här är taggen inkapslad men satt med grå bakgrund.</p>
+                        </div>
+                        <p>...och här är lite mer svart div.</p>
+                    </div>
+                </div>
+				<br><br>
+                
+                <h2>&lt;span&gt;</h2>
+				<p>Taggen &lt;span&gt; är en inline container för att markera en del av en text eller dokument.</p>
+				<pre>
+    &lt;p&gt;
+        Här är en vit text men med ett 
+        &lt;span style="color:blue"&gt;blått&lt;/span&gt; ord.
+    &lt;/p&gt;
+                </pre>
+				<div class="example">
+                    <p>Här är en vit text men med ett <span style="color:blue">blått</span> ord.</p>
+                </div>
+				<br><br>
+			</div>				
+		</div>
+    </div>
+
+    <div class="footer">
+
+    </div>
+</body>
+</html>

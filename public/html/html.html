@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="HTML, CSS">
+    <link rel="stylesheet" type="text/css" href="../mystyle.css">
+    <title>Chris' Corner</title>
+    
+</head>
+<body>
+    <div class="header">
+        <h2>Christofer Gumowskis tutorial</h2>
+    </div>
+
+    <div id="menu" class="column">
+		<div class="bottom">
+            <a href="../../index.html"><img src="../images/scroll-gray.png" class="imgBack" alt="Tillbaka"></a>
+            <h2>HTML</h2>
+			<ol>
+				<li><a href="html.html">Grunderna kring HTML</a></li>
+				<li><a href="tags.html">HTML-taggar</a></li>
+			</ol>
+	
+			<h2>CSS</h2>
+			<ol>
+				<li><a href="css.html">Grunderna kring CSS</a></li>
+				<li><a href="properties.html">CSS-egenskaper</a></li>
+			</ol>
+			
+			<h2>JavaScript</h2>
+			<ol>
+				<li><a href="javascript.html">Inlämning 1</a></li>
+                <li><a href="guestbook.html">Gästbok</a></li>
+			</ol>
+        </div>
+    </div>
+
+    <div id="contentBody" class="column">
+		<div class="title">
+			<h1>HTML</h1>
+		</div>
+        <div class="bottom">
+			<div id="content">
+                <h2><br>&lt;!DOCTYPE html&gt;</h2>
+				<p>För att en webbläsare ska kunna läsa innehållet av en .html-fil krävs det att man deklarerar detta. </p>
+                <p>Deklaration sker enligt nedan och görs alltid högst upp i en sida.</p>
+				<pre>
+	&lt;!DOCTYPE html&gt;
+				</pre>
+				<br><br>
+
+				<h2>Radavstånd och mellanrum</h2>
+				<p>HTML känner inte av radavstånd och mellanrum i sitt innehåll, om man inte uttrycker dessa explicit.</p>
+				<pre>
+	Inget extra mellanrum mellan här och 
+                    
+                    där
+				</pre>
+				<div class="example">Inget extra mellanrum mellan här och 
+                    
+                    där</div>
+                <br>
+                <pre>
+	En radbrytning mellan här och &lt;br&gt; där
+				</pre>
+				<div class="example">En radbrytning mellan här och <br> där</div>
+				<br><br>
+
+                <h2>Kommentarer</h2>
+				<p>Om man vill kommentera sin text i ett HTML-dokument så används &lt;!-- kommentar här --&gt;</p>
+                <p>Kommentarer syns inte i en sidas innehåll.</p>
+				<pre>
+	&lt;p&gt;En text&lt;/p&gt;&lt;!-- Här är en kommentar --&gt;
+				</pre>
+				<div class="example"><p>En text</p><!-- Här är en kommentar --></div>
+				<br><br>
+
+                <h2>Escape-sekvenser</h2>
+				<p>Eftersom att HTML läser vissa tecken som kod, så måste dessa uttryckas explicit med en formel för att synas.</p>
+                <p>Exempel på dessa är &lt;, &gt;, &amp;, &quot;, och &apos;.</p>
+				<pre>
+	&lt;p&gt;&amp;lt;&lt;/p&gt;
+				</pre>
+				<div class="example"><p>&lt;</p></div>
+                <br>
+                <pre>
+	&amp;lt;p&amp;gt;&amp;amp;lt;&amp;lt;/p&amp;gt;
+				</pre>
+				<div class="example">&lt;p&gt;&amp;lt;&lt;/p&gt;</div>
+				<br><br>
+
+                <h2>Sökvägar och länkar</h2>
+				<p>Sökvägar i HTML kan skrivas på två sätt, som relativa eller absoluta värden.</p>
+				<p>En relativ länk utgår från webbsidans plats i sin egna filstruktur. Man kommer enkelt åt relaterade filer inom ens projekt, förutsatt att
+					de finns där, samt att filsökvägen är korrekt. Viktigt är att hålla reda på om man länkar till rätt mapp och från vilken man utgår.</p>
+				<p>En absolut länk går istället alltid till samma bestämda plats. Dessa fungerar väl för att t ex länka till en extern hemsida.</p>
+				<pre>
+	&lt;a href="../index.html"&gt;relativ länk&lt;/a&gt;
+				</pre>
+				<div class="example"><p>Här är en <a href="../index.html">relativ länk</a> som tar dig till huvudsidan, utifrån denna sidas placering i filstrukturen. "../" indikerar att vi går "upp" en mapp i filstrukturen.</p></div>
+                <br>
+                <pre>
+	&lt;a href="https://chgum.se/index.html"&gt;absolut länk&lt;/a&gt;
+				</pre>
+				<div class="example"><p>Här är en <a href="https://chgum.se/index.html">absolut länk</a> som tar dig till samma sida (förutsatt att den är nåbar).</p></div>
+				<br><br>
+
+                <h2><a href="tags.html">Vidare till HTML-taggar</a></h2>
+			</div>				
+		</div>
+    </div>
+
+    <div class="footer">
+  
+    </div>
+</body>
+</html>
