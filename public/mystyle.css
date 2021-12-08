@@ -230,5 +230,9 @@ ol.ol2 { list-style-type: lower-alpha; }
     background-color: rgb(46, 42, 42);
     width: 500px;
     margin-left: 20px;
-    margin-top: 20px;}
-.postContainer p {font-size: 16px;}
+    margin-top: 20px;
+    }
+.postContainer p {font-size: 16px;display:inline-block;}
+.postMessage {background-color:rgb(150, 137, 137); border-radius: 0.5rem; border-style: inset; padding: 1rem;}
+.guestbookButtons {width: 30px; height: 30px;  float:right; margin-right:1rem;}
+.likes {float:right; margin-top: 50px;}
