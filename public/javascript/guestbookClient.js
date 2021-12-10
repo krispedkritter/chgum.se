@@ -2,6 +2,7 @@ const doAsyncStuff = async () => {
     let data = await fetch('../javascript/messages.json');
     data = await data.json();
 
+    // Hämtar och skriver ut innehållet i "messages.json"
     data.forEach((item) => {
         const allMessages = document.querySelector(".guestbookContent");
 
@@ -27,14 +28,6 @@ const doAsyncStuff = async () => {
         likes.className=  "likes";
         likes.innerHTML = "Likes: "+item.likes;
         
-        // Knappar i ett meddelande för +/-            
-        let liked = 0; 
-        let disliked = 0;
-        const plusButton = document.createElement("button");
-        plusButton.className=  "guestbookButtons";
-        plusButton.setAttribute("id", "plusButton");
-        plusButton.innerHTML ="+";
-
         // Funktion för att skicka förändring i meddelande (endast antal Likes som kan ändras, +/- 1)
         function editLike(){
             fetch("/editLike", {
@@ -52,7 +45,7 @@ const doAsyncStuff = async () => {
             });
         };
 
-        // Funktion för att animera +/- knapp när man redan tryckt på den en gång
+        // Funktion för att animera +/- knapp när man redan tryckt på den en gång under en session
         function wiggle(button){
             button.animate([
                 { transform: 'translateX(30px)' },
@@ -62,8 +55,16 @@ const doAsyncStuff = async () => {
             ], {
                 duration: 1000
             }
-            )};
+        )};
 
+        // Knappar i ett meddelande för +/-            
+        let liked = 0; 
+        let disliked = 0;
+
+        const plusButton = document.createElement("button");
+        plusButton.className=  "guestbookButtons";
+        plusButton.setAttribute("id", "plusButton");
+        plusButton.innerHTML ="+";    
         plusButton.onclick = function() {
             if (liked == 0){
                 liked++;
@@ -108,4 +109,3 @@ const doAsyncStuff = async () => {
     });
 };
 doAsyncStuff();
-

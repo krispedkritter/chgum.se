@@ -221,6 +221,8 @@ ol.ol2 { list-style-type: lower-alpha; }
 #paddedDiv3 { padding-left: 150px; border: 3px solid #cccccc; }
 #marginLeft {margin-left:100px;}
 #marginUp {margin-top: 100px; background-color: green;}
+
+/* Gästbok */
 #guestbookForm {padding-top: 50px;}
 #guestbookMessage {width: 500px;}
 #guestbookName, #guestbookEmail {width: 200px;}
@@ -236,3 +238,15 @@ ol.ol2 { list-style-type: lower-alpha; }
 .postMessage {background-color:rgb(150, 137, 137); border-radius: 0.5rem; border-style: inset; padding: 1rem;}
 .guestbookButtons {width: 30px; height: 30px;  float:right; margin-right:1rem;}
 .likes {float:right; margin-top: 50px;}
+
+/* Chattrum */  
+#chatBody { margin: 0; margin-left: 1rem; padding-bottom: 3rem; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+#chatForm { padding: 0.25rem; padding-top: 1rem; position: absolute; bottom: 0; left: 0; right: 0; display: flex; height: 3rem; box-sizing: border-box; backdrop-filter: blur(10px); } 
+#chatMessage { border: none; padding: 0.75rem; flex-grow: 1; border-radius: 2rem; margin: 0.25rem; z-index: 1;}
+#chatMessage:focus { outline: none; }
+#chatForm > button { border: none; padding: 0 1rem; margin: 0.25rem; border-radius: 3px; outline: none; color: #fff; }
+#messages { list-style-type: none; margin: 0; padding: 0; }
+#ownMessages { text-align:right; margin-right:1rem;}
+#output { width: 70%; height: 80%; display: inline-block; max-width: 70%;}
+#usersOnline {width: 25%; position:absolute; bottom: 3.25rem; right: 2rem; text-align:right; border-left: 0.25rem; border-style: inset;}
+#typing {position: absolute; bottom: 3.25rem; font-style:italic;  margin:0;}

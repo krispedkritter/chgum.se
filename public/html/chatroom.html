@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="sv">
-	
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +7,10 @@
 	<meta name="keywords" content="HTML, CSS">
     <link rel="stylesheet" type="text/css" href="../mystyle.css">
     <title>Chris' Corner</title>
-	<script src="../javascript/javascriptPart1.js" defer> </script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Importera socket.io -->
+        <script src="/socket.io/socket.io.js"></script> <!-- routas till en sökväg på vär egen dator, där vi har installerat socket.io -->
+        <!-- Eget klientskript -->
+        <script src="../javascript/chatClientScript.js"></script>
 </head>
 <body>
     <div class="header">
@@ -17,7 +18,7 @@
     </div>
 
     <div id="menu" class="column">
-		<div class="bottom">
+        <div class="bottom">
             <a href="../../index.html"><img src="../images/scroll-gray.png" class="imgBack" alt="Tillbaka"></a>
             <h2>HTML</h2>
 			<ol>
@@ -42,19 +43,27 @@
 
     <div id="contentBody" class="column">
 		<div class="title">
-			<h1>JavaScript inlämning 1</h1>
+			<h1>Socket.io</h1>
 		</div>
         <div class="bottom">
-			<div id="contentButtons"></div>
-			<div id="content">
-                
-			</div>				
+			<div id="content">  
+                <div id="chatBody">
+                    <!-- Input och output för chat-applikationen -->
+                    <form id="chatForm" action="">
+                        <textarea id="chatMessage"></textarea><br>
+                        <input type="submit" id="sendMessage" value="Chatta!" autocomplete="off">
+                        <input type="button" id="changeNickname" value="Ändra namn">
+                    </form>
+                    <div id="output"></div>
+                    <div id="usersOnline"></div>
+                    <p id="typing"></p>
+                </div>
+            </div>				
 		</div>
     </div>
 
     <div class="footer">
-  
+
     </div>
 </body>
-
 </html>
