@@ -9,9 +9,17 @@ app.get("/", (req, res) => {
 
 const http = require("http");
 const server = http.createServer(app);
+
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+server.listen(port);
+
+/*
 server.listen(3000, () => {
     console.log("Kör servern på localhost:3000");
-});
+});*/
 
 const { Server } = require("socket.io");
 const io = new Server(server);
