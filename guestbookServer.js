@@ -4,7 +4,14 @@ const bodyParser = require("body-parser");
 const fs = require("fs");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.listen(3000);   // lyssnar på port 3000
+//app.listen(3000);   // lyssnar på port 3000
+
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+server.listen(port);
+
 console.log("Kör servern på localhost:3000");
 
 // Publik folder = "public"
