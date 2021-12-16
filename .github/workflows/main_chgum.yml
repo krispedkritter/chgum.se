@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'chgum'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_227437214F404B2591E5E96B761954A3 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_89452975E47A40A8A60329ED47ACBDB6 }}
           package: .
